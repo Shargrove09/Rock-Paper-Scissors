@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    Ghetto RPS
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokemon RPS</title>
+    <body>
+      <main id="main-content">
+        <h1 id="title">Pokemon Starter RPS</h1>
+        <div id="game-container">
+          <div id="btn-container">
+            <div id="grass" class="button">
+              <img src="Sprigatito.png" class="buttonImg" alt="Grass" />
+            </div>
+          </div>
+          <div id="btn-container">
+            <div id="fire" class="button">
+              <img src="Fuecoco.png" class="buttonImg" alt="Fire" />
+            </div>
+          </div>
+          <div id="btn-container">
+            <div id="water" class="button">
+              <img src="Quaxly.png" class="buttonImg" alt="Water" />
+            </div>
+          </div>
+        </div>
+        <div id="score-container">
+          <div id="player-score">0</div>
+          <div id="rival-score">0</div>
+        </div>
+        <div id="results-container"></div>
+      </main>
+    </body>
   </head>
   <script src="rps.js"></script>
 </html>
