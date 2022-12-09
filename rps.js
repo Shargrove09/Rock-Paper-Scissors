@@ -3,10 +3,10 @@ function randomInteger(min, max) {
 }
 
 function getComputerChoice() {
-  num = randomInteger(1, 3);
+  selection = randomInteger(1, 3);
 
-  if (num == 1) return "rock";
-  else if (num == 2) return "paper";
+  if (selection == 1) return "rock";
+  else if (selection == 2) return "paper";
   else return "scissors";
 }
 
