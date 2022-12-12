@@ -1,8 +1,79 @@
+body {
+  background-image: url("pokeball-background.webp");
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .buttonImg {
   width: 250px;
   height: 250px;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#score-container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+#score-number-container {
+  display: flex;
+  margin: auto;
+}
+
+#score-title {
+  margin: auto;
+}
+
+#player-score-container {
+  margin-right: 400px;
+}
+
 .button {
   cursor: pointer;
+}
+
+.score,
+#score-title {
+  font-size: 32px;
+  color: white;
+}
+
+#name-title-container {
+  display: flex;
+}
+
+#you-title {
+  margin-right: 400px;
+}
+
+#player-score-container,
+#rival-score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96px;
+  width: 96px;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.btn-container {
+  width: 275px;
+  height: 275px;
+  border: 2px solid white;
+  margin: 8px;
 }
