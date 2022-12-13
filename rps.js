@@ -23,11 +23,11 @@ function getPlayerChoice(playerChoice) {
 } */
 
 function playRound(computerSelection, playerSelection) {
-  console.log("Comp: ", computerSelection);
-  console.log("Player: ", playerSelection);
+  setRivalSelection(computerSelection);
+  setPlayerSelection(playerSelection);
 
   if (computerSelection == playerSelection) {
-    return "TIE!";
+    setResults(`${playerSelection} ties ${computerSelection}. It's a draw!`);
   }
   // Player Wins
   else if (
@@ -37,7 +37,7 @@ function playRound(computerSelection, playerSelection) {
   ) {
     playerScore++;
     setPlayerScore();
-    return `${playerSelection} beats ${computerSelection}. Player Wins!`;
+    setResults(`${playerSelection} beats ${computerSelection}. You Win!`);
   } else if (
     // Computer Wins
     (computerSelection == "grass" && playerSelection == "water") ||
@@ -46,7 +46,7 @@ function playRound(computerSelection, playerSelection) {
   ) {
     computerScore++;
     setComputerScore();
-    return `${computerSelection} beats ${playerSelection}. Computer Wins!`;
+    setResults(`${computerSelection} beats ${playerSelection}. Rival Wins!`);
   } else {
     return "Something has gone horribly wrong....";
   }
@@ -71,18 +71,57 @@ buttons.forEach((button) => {
 
 function setPlayerScore() {
   let playerScoreBox = document.querySelector("#player-score");
+  let computerScoreBox = document.querySelector("#rival-score");
   playerScoreBox.textContent = playerScore;
   if (playerScore == 5) {
     alert("PLAYER WINS");
+    player = 0;
+    playerScoreBox.textContent = playerScore;
+    computerScore = 0;
+    computerScoreBox.textContent = computerScore;
   }
+}
+
+function setPlayerSelection(selection) {
+  let playerSlot = document.querySelector("#player-pokeball");
+
+  if (selection == "grass") {
+    playerSlot.src = "Sprigatito.png";
+  } else if (selection == "fire") {
+    playerSlot.src = "Fuecoco.png";
+  } else if (selection == "water") {
+    playerSlot.src = "Quaxly.png";
+  }
+}
+
+function setRivalSelection(selection) {
+  let rivalSlot = document.querySelector("#rival-pokeball");
+  if (selection == "grass") {
+    rivalSlot.src = "Sprigatito.png";
+  } else if (selection == "fire") {
+    rivalSlot.src = "Fuecoco.png";
+  } else if (selection == "water") {
+    rivalSlot.src = "Quaxly.png";
+  }
+}
+
+function setResults(text) {
+  let resultsText = document.querySelector("#results-text");
+  resultsText.textContent = text;
 }
 
 function setComputerScore() {
+  let playerScoreBox = document.querySelector("#player-score");
   let computerScoreBox = document.querySelector("#rival-score");
   computerScoreBox.textContent = computerScore;
   if (computerScore == 5) {
-    alert("Computer WINS");
+    alert("Computer WINS. Resetting Game");
+    computerScore = 0;
+    computerScoreBox.textContent = computerScore;
+    player = 0;
+    playerScoreBox.textContent = playerScore;
   }
 }
 
+// Play the game
 game();
