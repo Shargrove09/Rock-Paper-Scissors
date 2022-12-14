@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Pokemon-Hollow;
-  src: url(Pokemon_Hollow.ttf);
+  font-family: Pokemon-Solid;
+  src: url(Pokemon_Solid.ttf);
 }
 
 @font-face {
@@ -109,10 +109,11 @@ body {
 }
 
 .title {
-  font-family: Pokemon-Hollow;
+  font-family: Pokemon-Solid;
   display: flex;
   justify-content: center;
-  color: black;
+  color: white;
+  text-shadow: -3px -5px 0 #000;
 }
 
 #game-container {
