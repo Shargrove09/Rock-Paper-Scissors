@@ -3,6 +3,10 @@
   src: url(Pokemon_Hollow.ttf);
 }
 
+@font-face {
+  font-family: arcade-classic;
+  src: url(pixeboy-z8XGD.ttf);
+}
 body {
   background-image: url("pokeball-background.jpg");
 }
@@ -11,6 +15,92 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+}
+
+/* Info Button */
+
+#info-btn {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 25px;
+  margin: 12px 16px 0px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-reference-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-types {
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.modal-equals {
+  font-size: 48px;
+  font-weight: bold;
+  padding: 0px 12px 0px 12px;
+}
+
+.modal-starter {
+  width: 150px;
+  height: 150px;
+}
+
+.modal-energy {
+  width: 100px;
+  height: 100px;
 }
 
 .buttonImg {
@@ -118,9 +208,16 @@ body {
 }
 
 #results-container {
+  display: flex;
   width: 800px;
   height: 75px;
   background-color: white;
   border: 2px solid black;
   margin-top: 24px;
+}
+
+#results-text {
+  margin: auto;
+  font-family: arcade-classic;
+  font-size: 32px;
 }

@@ -5,7 +5,57 @@
     <title>Pokemon RPS</title>
     <body>
       <main class="main-content">
-        <h1 class="title">Pokemon Starter RPS</h1>
+        <div id="header">
+          <h1 class="title">Pokemon Starter RPS</h1>
+          <button id="info-btn">?</button>
+        </div>
+
+        <div class="modal" id="info-modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="modal-text">
+              Welcome! This is a simple RPS webpage based off of the popular
+              series Pokemon.
+            </p>
+            <p class="modal-text">Instructions:</p>
+            <p class="modal-text">
+              Simply click a starter to choose against the computer rival. Your
+              rival will randomly pick their own starter. First to 5 wins!
+            </p>
+            <div id="modal-reference-images">
+              <img id="type-matchup-image" src="type-matchup.jpg" />
+              <div id="matchup-container">
+                <div class="modal-types" id="grass-type">
+                  <img class="modal-starter" src="Sprigatito.png" />
+                  <p class="modal-equals">=</p>
+                  <img
+                    class="modal-energy"
+                    id="modal-grass"
+                    src="grass-energy.png"
+                  />
+                </div>
+                <div class="modal-types" id="fire-type">
+                  <img class="modal-starter" src="Fuecoco.png" />
+                  <p class="modal-equals">=</p>
+                  <img
+                    class="modal-energy"
+                    id="modal-fire"
+                    src="fire-energy.png"
+                  />
+                </div>
+                <div class="modal-types" id="water-type">
+                  <img class="modal-starter" src="Quaxly.png" />
+                  <p class="modal-equals">=</p>
+                  <img
+                    class="modal-energy"
+                    id="modal-water"
+                    src="water-energy.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="game-container">
           <div class="btn-container">
             <div id="grass" class="button">
