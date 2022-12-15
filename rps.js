@@ -69,7 +69,7 @@ function getComputerQuote(playerOutcome) {
       case 3:
         rivalTextBox.textContent =
           "Wow you really are fit to be my rival! One more!";
-        console.log("Wow you really are fit to be my rival! One more!");
+        console.log("You really are fit to be my rival! One more!");
         break;
     }
   }
@@ -163,9 +163,13 @@ function setRivalSelection(selection) {
   }
 }
 
+const resultsText = document.querySelector("#results-text");
+
 function setResults(text) {
-  let resultsText = document.querySelector("#results-text");
   resultsText.textContent = text;
+  resultsText.classList.remove("results-text-anim");
+  resultsText.offsetWidth;
+  resultsText.classList.add("results-text-anim");
 }
 
 function resetGame() {

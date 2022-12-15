@@ -212,6 +212,7 @@ body {
 
 #results-container {
   display: flex;
+  justify-content: center;
   width: 800px;
   height: 75px;
   background-color: white;
@@ -223,6 +224,25 @@ body {
   margin: auto;
   font-family: pixeboy;
   font-size: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.results-text-anim {
+  animation: typing 0.8s steps(40, end);
+}
+
+#results-text-container {
+  width: fit-content;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 #rival-text-container {
