@@ -232,8 +232,8 @@ body {
   animation: typing 0.8s steps(40, end);
 }
 
-#results-text-container {
-  width: fit-content;
+.results-text-container {
+  display: flex;
 }
 
 @keyframes typing {
