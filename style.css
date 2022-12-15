@@ -1,11 +1,11 @@
 @font-face {
   font-family: Pokemon-Solid;
-  src: url(Pokemon_Solid.ttf);
+  src: url(/Pokemon_Solid.ttf);
 }
 
 @font-face {
   font-family: pixeboy;
-  src: url(pixeboy-z8XGD.ttf);
+  src: url(/pixeboy-z8XGD.ttf);
 }
 body {
   background-image: url("pokeball-background.jpg");
