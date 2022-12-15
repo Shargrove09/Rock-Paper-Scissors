@@ -14,18 +14,11 @@ function getComputerChoice() {
   else return "water";
 }
 
-//Deprecated no longer needed
-/*
-function getPlayerChoice(playerChoice) {
-  // let playerChoice = prompt("Type grass, fire or water");
-  console.log("Player picked: ", playerChoice);
-  return playerChoice;
-} */
-
 function playRound(computerSelection, playerSelection) {
   setRivalSelection(computerSelection);
   setPlayerSelection(playerSelection);
 
+  // Tie
   if (computerSelection == playerSelection) {
     setResults(`${playerSelection} ties ${computerSelection}. It's a draw!`);
     getComputerQuote("tie");
@@ -54,6 +47,8 @@ function playRound(computerSelection, playerSelection) {
     return "Something has gone horribly wrong....";
   }
 }
+
+//Generating rival quote
 
 const rivalTextBox = document.querySelector("#rival-text");
 
@@ -124,10 +119,13 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const img = button.querySelector("img");
     playerSelection = img.alt.toLowerCase();
-    console.log(playRound(getComputerChoice(), playerSelection));
+
+    //Playing Round when button is clicked
+    playRound(getComputerChoice(), playerSelection);
   });
 });
 
+// Setting Scores
 function setPlayerScore() {
   playerScoreBox.textContent = playerScore;
   if (playerScore == 5) {
@@ -144,6 +142,7 @@ function setComputerScore() {
   }
 }
 
+// Changin Selection Images
 function setPlayerSelection(selection) {
   if (selection == "grass") {
     playerSlot.src = "Sprigatito.png";
