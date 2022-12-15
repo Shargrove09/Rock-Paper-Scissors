@@ -57,28 +57,29 @@ function playRound(computerSelection, playerSelection) {
 
 const rivalTextBox = document.querySelector("#rival-text");
 
-function getComputerQuote(outcome) {
+function getComputerQuote(playerOutcome) {
   randInt = randomInteger(1, 3);
   console.log("RandInt", randInt);
 
-  if (outcome == "win") {
+  if (playerOutcome == "tie") {
     switch (randInt) {
       case 1:
-        rivalTextBox.textContent = "Ha I win! Better Luck Next Time";
-        console.log("Ha I win! Better Luck Next Time");
+        rivalTextBox.textContent = "Great minds think alike!";
+        console.log("Great minds think alike!");
         break;
       case 2:
-        rivalTextBox.textContent = "Yes! Gotcha!";
-        console.log("Yes! Gotcha!");
+        rivalTextBox.textContent = "A tie! Wow!";
+        console.log("A tie! Wow!");
         break;
       case 3:
-        rivalTextBox.textContent = "Nice! This is why I love battling!";
-        console.log("Nice! This is why I love battling!");
+        rivalTextBox.textContent =
+          "Wow you really are fit to be my rival! One more!";
+        console.log("Wow you really are fit to be my rival! One more!");
         break;
     }
   }
 
-  if (outcome == "lose") {
+  if (playerOutcome == "win") {
     switch (randInt) {
       case 1:
         rivalTextBox.textContent = "Wow! Nice move!";
@@ -95,20 +96,19 @@ function getComputerQuote(outcome) {
     }
   }
 
-  if (outcome == "tie") {
+  if (playerOutcome == "lose") {
     switch (randInt) {
       case 1:
-        rivalTextBox.textContent = "Great minds think alike!";
-        console.log("Great minds think alike!");
+        rivalTextBox.textContent = "Ha I win! Better Luck Next Time";
+        console.log("Ha I win! Better Luck Next Time");
         break;
       case 2:
-        rivalTextBox.textContent = "A tie! Wow!";
-        console.log("A tie! Wow!");
+        rivalTextBox.textContent = "Yes! Gotcha!";
+        console.log("Yes! Gotcha!");
         break;
       case 3:
-        rivalTextBox.textContent =
-          "Wow you really are fit to be my rival! One more!";
-        console.log("Wow you really are fit to be my rival! One more!");
+        rivalTextBox.textContent = "Nice! This is why I love battling!";
+        console.log("Nice! This is why I love battling!");
         break;
     }
   }
